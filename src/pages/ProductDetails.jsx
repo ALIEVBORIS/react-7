@@ -2,9 +2,12 @@ import React from 'react';
 import { api } from '../api/axios.api';
 import { useParams } from 'react-router-dom';
 import '../styles/ProductDetails.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = React.useState({});
   React.useEffect(() => {
     const fetchProductById = async () => {
@@ -16,6 +19,14 @@ const ProductDetails = () => {
 
   return (
     <div className="product_details">
+      <div className="header">
+        <div className="nav">
+          <span onClick={() => navigate('/')}>Главная</span>
+          <span onClick={() => navigate('/contacts')}>Контакты</span>
+          <span onClick={() => navigate('/cart')}>Корзина</span>
+          {/* <span onClick={() => navigate('/singup')}>SingUp</span> */}
+        </div>
+      </div>
       <div className="images">
         <div className="gallery">
           {product?.images?.map((item, index) => (

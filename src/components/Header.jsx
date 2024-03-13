@@ -4,14 +4,14 @@ import '../styles/Header.css';
 
 const Header = () => {
   const navigate = useNavigate();
-
   return (
     <div className="header">
-      <div className="nav">
+      {/* <div className="nav">
         <span onClick={() => navigate('/')}>Главная</span>
         <span onClick={() => navigate('/contacts')}>Контакты</span>
         <span onClick={() => navigate('/cart')}>Корзина</span>
-      </div>
+        <span onClick={() => navigate('/singup')}>SingUp</span>
+      </div> */}
     </div>
   );
 };

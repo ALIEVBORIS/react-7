@@ -13,6 +13,14 @@ const Home = () => {
   }, []);
   return (
     <div>
+      <div className="header">
+        <div className="nav">
+          <span onClick={() => navigate('/')}>Главная</span>
+          <span onClick={() => navigate('/contacts')}>Контакты</span>
+          <span onClick={() => navigate('/cart')}>Корзина</span>
+          {/* <span onClick={() => navigate('/singup')}>SingUp</span> */}
+        </div>
+      </div>
       <div className="products">
         {items &&
           items.map((item) => (
